@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EgyptWW-BoostingService</title>
+    <link rel="icon" href="./assets/1.jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+            <img src="./assets/image-removebggg.png" alt="Brand Icon" class="brand-icon">
+            <h1>Wuthering Waves</h1>
+        <nav>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </div>
+            <ul id="nav-menu">
+                <li class="card__button button button-main" onclick="showCouponPopup()"><i class="icon-order"></i> كود خصم</li>
+                <li><a href="#Exploration">الأستكشاف</a></li>
+                <li><a href="#Leveling">التلفيل</a></li>
+                <li><a href="#Farming">التفريم</a></li>
+                <!-- <li><a href="indexStable.html">English</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="hideCouponPopup()"></div>
+
+    <!-- Popup -->
+    <div id="contact-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hideContactPopup()">&times;</span>
+            <p style="font-weight: bold;">تواصل معي ديسكورد: holytoasty</p>
+            <p style="font-weight: bold;">او من خلال:</p>
+            <a href="https://wa.link/tqbxnc" target="_blank"> <button class="button button-green">WhatsApp</button></a>
+            <!-- <button class="button button-blue" onclick="window.location.href='https://www.facebook.com/YOUR_FACEBOOK_PROFILE'">Facebook</button> -->
+        </div>
+    </div>
+    <div id="coupon-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hideCouponPopup()">&times;</span>
+            <p>ادخل كود الخصم</p>
+            <input type="text" id="coupon-code" placeholder="كود الخصم" class="coupon-input">
+            <button class="button-green" id="applyCouponBtn" onclick="applyCoupon()">استخدم كود الخصم</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+        </div>
+    <div class="container">
+            <section id="Exploration" class="offer-section">
+                <h2>الأستكشاف</h2>
+                <div class="offer-box">
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">Mt. Firmament</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>100% استكشاف
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">200 جنية / 5$</span>
+                                                    <span class="discounted-price">100 جنية / 2$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">Dim Forest</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>100% استكشاف
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">300 جنية / 7$</span>
+                                                    <span class="discounted-price">150 جنية / 3.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">Central Plains</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>100% استكشاف
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">300 جنية / 7$</span>
+                                                    <span class="discounted-price">150 جنية / 3.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">Port City of Guixu</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>100% استكشاف
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">250 جنية / 6$</span>
+                                                    <span class="discounted-price">125 جنية / 2.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">Desorock Highland</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>100% استكشاف
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">250 جنية / 6$</span>
+                                                    <span class="discounted-price">125 جنية / 2.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Whining Aix's Mire</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">200 جنية / 5$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Kitazano</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Jinzhou</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Gorges of Spirits</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Wuming Bay</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">The Tiger's Maw</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section id="Leveling" class="offer-section">
+                <h2>التلفيل</h2>
+                <div class="offer-box">
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">تلفيل الشخصية</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>الي رانك 6
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>كل الموارد المطلوبة</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>امن تماما</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">150 جنية / 3$</span>
+                                                    <span class="discounted-price">75 جنية / 1.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">Whining Aix's Mire</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>100% استكشاف</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>جميع المهام والحزم
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">200 جنية / 5$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </section>
+
+            <section id="Farming" class="offer-section">
+                <h2>التفريم</h2>
+                <div class="offer-box">
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">تفريم وحش C4 50 مره</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>أختار الوحش
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>احصائيات عشوائية</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>خدمة سريعة</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">250 جنية / 6$</span>
+                                                    <span class="discounted-price">125 جنية / 3$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-wrapper">
+                        <div class="discount-badge">50%</div> <!-- Add the discount badge here -->
+                        <div class="card-container">
+                            <div class="offer discounted-offer" data-discount="50">
+                                <div class="card__head">
+                                    <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                    <div class="card__head-content">
+                                        <p class="card__title">تفريم وحوش C3 - C1</p>
+                                        <ul class="product-advantages card__bullits">
+                                            <li class="product-advantage"><i class="icon-level"></i>أختار الوحش
+                                            </li>
+                                            <li class="product-advantage"><i class="icon-price"></i>احصائيات عشوائية</li>
+                                            <li class="product-advantage"><i class="icon-safety"></i>خدمة سريعة</li>
+                                        </ul>
+                                        <div class="card__order">
+                                            <span class="upper-cent-price card__price">
+                                                <span class="upper-cent-price__body">
+                                                    <span class="old-price">300 جنية / 7$</span>
+                                                    <span class="discounted-price">150 جنية / 3.5$</span>
+                                                </span>
+                                            </span>
+                                            <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">تفريم اي دومين</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>اختار الدومين</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>امن تماما وسريع
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">150 جنية / 3$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="offer nondiscounted-offer">
+                            <div class="card__head">
+                                <img src="./assets/2.jpeg" alt="Background" class="card__img-bg">
+                                <div class="card__head-content">
+                                    <p class="card__title">داتا بانك ماكس</p>
+                                    <ul class="product-advantages card__bullits">
+                                        <li class="product-advantage"><i class="icon-level"></i>الي لفل 21</li>
+                                        <li class="product-advantage"><i class="icon-price"></i>كله ذهبي 🥰
+                                        </li>
+                                        <li class="product-advantage"><i class="icon-safety"></i>سعر عادل</li>
+                                    </ul>
+                                    <div class="card__order">
+                                        <span class="upper-cent-price card__price">
+                                            <span class="upper-cent-price__body">
+                                                <span class="original-price">250 جنية / 5$</span>
+                                            </span>
+                                        </span>
+                                        <div class="card__button button button-main" onclick="showContactPopup()"><i class="icon-order"></i> اطلب الان</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <script src="scripts.js"></script>
+    
+    <div id="overlay" class="overlay"></div>
+
+        <!-- asdsad -->

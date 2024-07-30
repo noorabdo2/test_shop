@@ -1,0 +1,510 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-direction: row;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-icon {
+    width: auto;
+    height: 34px;
+    margin-right: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #000000ad;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(41, 128, 185, 0.7);
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(52, 73, 94, 0.9);
+        width: 200px;
+        display: none;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+
+.offer-section {
+    margin-top: 30px;
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.offer-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.offer {
+    background-color: rgba(44, 62, 80, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    width: 100%;
+}
+
+.offer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card__head {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.card__img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.card__head-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.card__title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-advantages {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    color: white;
+    text-align: left;
+}
+
+.product-advantage {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.product-advantage::before {
+    content: '>';
+    color: #1abc9c;
+    margin-right: 10px;
+}
+
+.card__order {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+.upper-cent-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: baseline;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #6e6e6e;
+    font-size: 0.6em;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.discounted-price {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: block;
+}
+
+.card__button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.card__button i {
+    margin-right: 5px;
+}
+
+.card__button:hover {
+    background-color: #2ecc71;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.discount-wrapper {
+    position: relative;
+    overflow: visible; /* Allow the discount badge to be visible */
+    display: inline-block; /* Ensure it only takes up necessary space */
+}
+
+.card-container {
+    overflow: hidden; /* Control the overflow for the card content */
+    border-radius: 10px; /* Optional: Add border radius if needed */
+}
+
+.discount-badge {
+    position: absolute;
+    top: -20px; /* Adjust this value to position the badge */
+    right: -20px; /* Adjust this value to position the badge */
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    animation: glowing 1.5s infinite alternate, glitter 3s infinite;
+    z-index: 10;
+}
+
+@keyframes glowing {
+    from {
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 1);
+    }
+}
+
+@keyframes glitter {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.button-green {
+    background-color: #28a745;
+}
+
+.button-green:hover {
+    background-color: #218838;
+}
+
+.button-blue {
+    background-color: #007bff;
+}
+
+.button-blue:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Overlay */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Cairo';
+    src: url('./assets/Cairo-Regular.ttf') format('truetype');
+}
+
+li.card__button.button.button-main {
+    margin-top: auto;
+}
+
+
+li.card__button.button.button-main {
+    margin-top: auto;
+}
+
+.card__button {
+    background-color: #27ae60;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-top: 16px;
+}
+
+.card__title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0px 0px;
+    padding: 0px;
+    /* margin-top: 0px; */
+}
+
+@media (max-width: 1680px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: absolute; /* Change position to absolute on small screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(255 255 255 / 90%);
+        width: 200px;
+        display: none;
+        padding: 10px 0;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 1.1em;
+        color: #ff0000ad;
+        margin-right: 15px;
+    }
+    
+
+    .nav-toggle-bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000000ad;
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+}
