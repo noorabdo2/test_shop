@@ -466,7 +466,7 @@ li.card__button.button.button-main {
     /* margin-top: 0px; */
 }
 
-@media (max-width: 760px) {
+@media (max-width: 400px) {
     .nav-toggle {
         display: flex;
     }
