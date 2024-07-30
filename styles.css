@@ -507,4 +507,13 @@ li.card__button.button.button-main {
         margin: 4px 0;
         transition: 0.3s;
     }
+
+    .card__title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0px 0px;
+    padding: 0px;
+    margin: -15px;
+
+}
 }
